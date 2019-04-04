@@ -27,6 +27,7 @@ class Login extends Component {
   render() {
     return (
       <div>
+      <div>
         <input
           onChange={e => this.handleUsernameChange(e.target.value)}
           type="text"
@@ -36,6 +37,10 @@ class Login extends Component {
           type="text"
         />
         <button onClick={this.handleLogin}>Login</button>
+      </div>
+      <div>
+        Please Login
+      </div>
       </div>
     );
   }
