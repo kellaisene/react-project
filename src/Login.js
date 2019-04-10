@@ -41,6 +41,9 @@ class Login extends Component {
       <div>
         Please Login
       </div>
+      <button>
+        Sign Up
+      </button>
       </div>
     );
   }
