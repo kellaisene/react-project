@@ -1,14 +1,36 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import axios from 'axios';
 import './App.css';
 
-import Login from './Login';
+import List from './List';
+
+// import Login from './Login';
 
 class App extends Component {
+  state = {
+    starPeople: []
+  }
+
+  getStarPeople() {
+    return axios.get("https://swapi.co/api/people")
+    .then((response) => {
+      console.log('Response', response.data.results)
+      this.setState({ starPeople: response.data.results })
+    })
+  }
+
+  componentDidMount() {
+    this.getStarPeople()
+  }
   render() {
+    const {starPeople} = this.state;
     return (
       <div className="App">
-      <Login/>
+      <header>
+        Star Wars
+      </header>
+        <List starPeople={starPeople}/>
         {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
