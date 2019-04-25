@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
+import starWarsLogo from './svg-star-wars-4.png';
 import axios from 'axios';
 import './App.css';
 
@@ -28,7 +29,7 @@ class App extends Component {
     return (
       <div className="App">
       <header>
-        Star Wars
+        <img src={starWarsLogo} className="App-logo" alt="StarWars Logo"/>
       </header>
         <List starPeople={starPeople}/>
         {/* <header className="App-header">
