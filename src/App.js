@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
+import starWarsLogo from './svg-star-wars-4.png';
 import axios from 'axios';
 import './App.css';
 
@@ -9,7 +10,8 @@ import List from './List';
 
 class App extends Component {
   state = {
-    starPeople: []
+    starPeople: [],
+    planets: []
   }
 
   getStarPeople() {
@@ -20,15 +22,24 @@ class App extends Component {
     })
   }
 
+  getPlanets() {
+    return axios.get("https://swapi.co/api/planets")
+    .then((response) => {
+      console.log('PLANET RESP', response.data.results)
+      this.setState({ planets: response.data.planets })
+    })
+  }
+
   componentDidMount() {
-    this.getStarPeople()
+    this.getStarPeople();
+    this.getPlanets();
   }
   render() {
     const {starPeople} = this.state;
     return (
       <div className="App">
       <header>
-        Star Wars
+        <img src={starWarsLogo} className="App-logo" alt="StarWars Logo"/>
       </header>
         <List starPeople={starPeople}/>
         {/* <header className="App-header">

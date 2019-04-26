@@ -1,0 +1,21 @@
+.info-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  width: 50%;
+  padding: 40px 0;
+  background-color: gainsboro;
+}
+
+.data {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; */
+  /* margin: auto; */
+  margin-right: 30px;
+  text-align: center;
+  /* background-color: red; */
+}
