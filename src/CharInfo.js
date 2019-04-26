@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './charInfo.css';
 
 class CharInfo extends Component {
   constructor(props){
@@ -25,9 +26,9 @@ class CharInfo extends Component {
     }
 
     return (
-      <div>
+      <div className="info-card">
         <button onClick={this.closeInfo}>Hide Info</button>
-        <ul>
+        <ul className="data">
           <h2>Gender: {info.gender}</h2>
           <h2>Name: {info.name}</h2>
           <h2>Birth Year: {info.birth_year}</h2>

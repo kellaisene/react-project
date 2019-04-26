@@ -10,7 +10,8 @@ import List from './List';
 
 class App extends Component {
   state = {
-    starPeople: []
+    starPeople: [],
+    planets: []
   }
 
   getStarPeople() {
@@ -21,8 +22,17 @@ class App extends Component {
     })
   }
 
+  getPlanets() {
+    return axios.get("https://swapi.co/api/planets")
+    .then((response) => {
+      console.log('PLANET RESP', response.data.results)
+      this.setState({ planets: response.data.planets })
+    })
+  }
+
   componentDidMount() {
-    this.getStarPeople()
+    this.getStarPeople();
+    this.getPlanets();
   }
   render() {
     const {starPeople} = this.state;
