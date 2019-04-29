@@ -37,6 +37,7 @@ class HomePage extends Component {
     const {starPeople, planets} = this.state;
     return (
       <div className="list-columns">
+      Hello there
           <List starPeople={starPeople}/>
           <Planets planets={planets}/>
         {/* <header className="App-header">
