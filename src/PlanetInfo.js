@@ -34,7 +34,7 @@ class CharInfo extends Component {
           <h2>Gravity: {info.gravity}</h2>
           <h2>Population: {info.population}</h2>
           <h2>Rotation Period: {info.rotation_period}</h2>
-          <h2>Terrain: {info.Terrain}</h2>
+          <h2>Terrain: {info.terrain}</h2>
         </ul>
       </div>
     )
