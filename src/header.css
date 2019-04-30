@@ -1,0 +1,11 @@
+.header-links {
+    display: flex;
+    justify-content: space-around;
+    background-color: midnightblue;    
+    font-size: 24px;
+}
+
+.links {
+    color: white;
+    text-decoration: none;
+}

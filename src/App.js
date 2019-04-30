@@ -6,6 +6,7 @@ import './App.css';
 
 import Header from './Header';
 import HomePage from './HomePage';
+import PlanetPage from './PlanetPage';
 
 // import Login from './Login';
 
@@ -17,6 +18,7 @@ class App extends Component {
       <div className="App">
         <Header/>
         <Route exact path='/' component={HomePage}/>
+        <Route path='/planets' component={PlanetPage}/>
       </div>
       </Router>
     );
