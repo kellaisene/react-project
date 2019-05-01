@@ -1,11 +1,19 @@
 .header-links {
     display: flex;
     justify-content: space-around;
-    background-color: midnightblue;    
+    /* background-color: midnightblue;     */
     font-size: 24px;
+    flex-wrap: wrap;
 }
 
 .links {
-    color: white;
+    display: flex;
+    flex-direction: column;
+    color: midnightblue;
     text-decoration: none;
+}
+
+.image-dimensions {
+    height: 300px;
+    width: 550px;
 }
