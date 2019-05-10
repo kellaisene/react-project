@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import planetLogo from './planet.png';
 
 import Planets from './Planets';
 
@@ -24,6 +25,10 @@ class PlanetPage extends Component {
         const {planets} = this.state;
         return (
             <div className="list-columns">
+                <div className="list-header">
+                    Worlds of Star Wars
+                    <img className="image-dimensions" src={planetLogo}/>
+                </div>
                 <Planets planets={planets}/>
             </div>
         )

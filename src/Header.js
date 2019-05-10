@@ -15,15 +15,17 @@ class Header extends Component {
         <div className="header-links">
           <Link to='/' className="links">
             Home
-            <img className="image-dimensions" src={homeImg}/>
+            {/* <img className="image-dimensions" src={homeImg}/> */}
           </Link>
+          {'|'}
           <Link to='/people' className="links">
             People
-            <img className="image-dimensions" src={lukeImg}/>
+            {/* <img className="image-dimensions" src={lukeImg}/> */}
           </Link>
+          {'|'}
           <Link to='/planets' className="links">
             Planets
-            <img className="image-dimensions" src={planetLogo}/>
+            {/* <img className="image-dimensions" src={planetLogo}/> */}
           </Link>
         </div>
       </header>

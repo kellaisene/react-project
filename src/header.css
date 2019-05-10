@@ -1,3 +1,7 @@
+header{
+    padding: 40px 0;
+}
+
 .header-links {
     display: flex;
     justify-content: space-around;

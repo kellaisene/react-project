@@ -7,3 +7,10 @@
   /* flex-direction: row;
   background-color: green; */
 }
+
+.list-header {
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  font-weight: 700;
+}

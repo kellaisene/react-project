@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import axios from 'axios';
 import './homePage.css';
+import lukeImg from './luke-skywalker.jpeg';
 
 import List from './List';
 // import Planets from './Planets';
@@ -27,6 +28,10 @@ class People extends Component {
     const {starPeople, planets} = this.state;
     return (
       <div className="list-columns">
+      <div className="list-header">
+          Star Wars People
+        <img className="image-dimensions" src={lukeImg}/>
+      </div>
           <List starPeople={starPeople}/>
       </div>
     );
