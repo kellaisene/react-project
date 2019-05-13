@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import axios from 'axios';
 import './homePage.css';
+import homeImg from './the-binary-sunset.jpeg';
 
 import List from './List';
 // import Planets from './Planets';
@@ -41,6 +42,7 @@ class HomePage extends Component {
           <div>
             Click a category to learn more about the Star Wars Universe!
           </div>
+          <img className="image-dimensions" src={homeImg}/>
       </div>
     );
   }
