@@ -1,38 +1,38 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import planetLogo from './planet.png';
+import planetLogo from './images/planet.png';
 
 import Planets from './Planets';
 
 class PlanetPage extends Component {
-    state = {
-        planets: []
-    }
+	state = {
+		planets: []
+	};
 
-    getPlanets() {
-        return axios.get("https://swapi.co/api/planets")
-        .then((response) => {
-          console.log('PLANET RESP', response.data.results)
-          this.setState({ planets: response.data.results })
-        })
-      }
+	getPlanets() {
+		return axios.get('https://swapi.co/api/planets').then((response) => {
+			console.log('PLANET RESP', response.data.results);
+			this.setState({ planets: response.data.results });
+		});
+	}
 
-    componentDidMount() {
-        this.getPlanets();
-    }
+	componentDidMount() {
+		this.getPlanets();
+		// this.getPlanetResidents();
+	}
 
-    render() {
-        const {planets} = this.state;
-        return (
-            <div className="list-columns">
-                <div className="list-header">
-                    Worlds of Star Wars
-                    <img className="image-dimensions" src={planetLogo}/>
-                </div>
-                <Planets planets={planets}/>
-            </div>
-        )
-    }
+	render() {
+		const { planets } = this.state;
+		return (
+			<div className="list-columns">
+				<div className="list-header">
+					Worlds of Star Wars
+					<img className="image-dimensions" src={planetLogo} />
+				</div>
+				<Planets planets={planets} />
+			</div>
+		);
+	}
 }
 
 export default PlanetPage;
