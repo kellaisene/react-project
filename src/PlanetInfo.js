@@ -13,12 +13,12 @@ class CharInfo extends Component {
 		this.closeInfo = this.closeInfo.bind(this);
 	}
 
-	getPlanetResidents(residents) {
-		return axios.get(residents).then((response) => {
-			console.log('PLANET RESIDENTS', response.data);
-			// this.setState({ residents: response.data });
-		});
-	}
+	// getPlanetResidents(residents) {
+	// 	return axios.get(residents).then((response) => {
+	// 		console.log('PLANET RESIDENTS', response.data);
+	// 		// this.setState({ residents: response.data });
+	// 	});
+	// }
 
 	expandInfo() {
 		this.setState({ expanded: !this.state.expanded });
