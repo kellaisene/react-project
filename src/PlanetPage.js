@@ -17,6 +17,7 @@ class PlanetPage extends Component {
 	}
 
 	componentDidMount() {
+		console.log('planets', this.getPlanets());
 		this.getPlanets();
 	}
 
